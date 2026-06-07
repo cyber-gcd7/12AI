@@ -244,6 +244,7 @@
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    
     color: var(--navy);
     background: var(--gold);
     padding: 1.05rem 2.5rem;
@@ -465,7 +466,7 @@
 
   .problem-footnotes p {
     font-size: 0.7rem;
-    color: rgba(240,236,228,0.3);
+    color: rgba(240,236,228,0.28);
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
@@ -694,6 +695,110 @@
     opacity: 0.5;
   }
 
+  /* ─── VALIDATION BLOCK ─── */
+  .validation-block {
+    margin-top: 3rem;
+    border: 1px solid var(--gold-line);
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-mid) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .validation-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold) 0%, transparent 100%);
+  }
+
+  .validation-inner {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 0;
+  }
+
+  .validation-left {
+    padding: 3rem 2.5rem;
+    border-right: 1px solid var(--gold-line);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    background: rgba(200,146,42,0.04);
+  }
+
+  .validation-badge {
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--gold-line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+  }
+
+  .validation-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-family: var(--font-body);
+  }
+
+  .validation-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    line-height: 1.05;
+  }
+
+  .validation-right {
+    padding: 3rem 3rem;
+  }
+
+  .validation-desc {
+    font-size: 0.88rem;
+    color: var(--white-dim);
+    line-height: 1.75;
+  }
+
+  .validation-desc strong {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .validation-domains {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.8rem;
+  }
+
+  .vd-tag {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold-line);
+    padding: 0.4rem 0.9rem;
+    background: var(--gold-pale);
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .vd-tag:hover {
+    background: rgba(200,146,42,0.18);
+    border-color: var(--gold);
+  }
+
+  @media (max-width: 1024px) {
+    .validation-inner { grid-template-columns: 1fr; }
+    .validation-left { border-right: none; border-bottom: 1px solid var(--gold-line); flex-direction: row; align-items: center; padding: 2rem; }
+    .validation-right { padding: 2rem; }
+  }
+
   /* ─── SOCIAL PROOF ─── */
   #proof {
     background: var(--navy-mid);
@@ -849,7 +954,7 @@
     font-size: 0.6rem;
     font-weight: 500;
     letter-spacing: 0.2em;
-    color: var(--navy);
+    
     background: var(--gold);
     padding: 0.4rem 3rem;
     transform: rotate(45deg);
@@ -944,6 +1049,7 @@
   .pricing-cta.solid {
     background: var(--gold);
     color: var(--navy);
+    
   }
 
   .pricing-cta.solid:hover { background: var(--gold-bright); transform: translateY(-2px); }
@@ -1004,6 +1110,7 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--navy);
+    
     background: var(--gold);
     border: none;
     cursor: pointer;
@@ -1101,7 +1208,7 @@
   <ul class="nav-links">
     <li><a href="#curriculum">AI First</a></li>
     <li><a href="#personas">Fields</a></li>
-    <li><a href="#process">Process</a></li>
+    <li><a href="#process">Program</a></li>
     <li><a href="#proof">Results</a></li>
     <li><a href="#pricing">Pricing</a></li>
   </ul>
@@ -1286,16 +1393,16 @@
 <section id="process">
   <div class="container section-pad">
     <div style="text-align: center; margin-bottom: 1rem;" data-aos="fade-up">
-      <div class="eyebrow" style="justify-content: center;">The Method</div>
-      <h2 class="section-title">How It<br><em>Works</em></h2>
+      <div class="eyebrow" style="justify-content: center;">The Program</div>
+      <h2 class="section-title">Your Path to<br><em>Operator Status</em></h2>
     </div>
 
     <div class="process-flow" data-aos="fade-up" data-aos-delay="100">
       <div class="process-step">
         <span class="step-num">01</span>
-        <div class="step-phase">Assess</div>
-        <div class="step-title">Map Your Current State</div>
-        <p class="step-desc">A 20-minute diagnostic identifies your AI proficiency baseline, your professional domain's highest-value use cases, and your primary workflow bottlenecks. No generic onboarding.</p>
+        <div class="step-phase">Introduction</div>
+        <div class="step-title">12AI Operator Introduction</div>
+        <p class="step-desc">Build your AI foundation from the ground up. You'll master the core mental models, learn how to prompt with professional precision, and deploy your first AI-assisted workflows inside your actual role. No prior AI experience required — just domain expertise and the drive to level up.</p>
       </div>
       <div class="process-arrow">
         <svg class="arrow-svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -1304,9 +1411,9 @@
       </div>
       <div class="process-step">
         <span class="step-num">02</span>
-        <div class="step-phase">Learn</div>
-        <div class="step-title">Domain-Specific Training</div>
-        <p class="step-desc">Structured modules taught through real professional scenarios in your field. Live cohort sessions, expert practitioners, and case studies drawn from your exact discipline — not hypotheticals.</p>
+        <div class="step-phase">Advanced</div>
+        <div class="step-title">12AI Advanced Concepts</div>
+        <p class="step-desc">Go deeper. Build multi-step AI pipelines, automate complex cross-functional workflows, and develop your personal AI operating system. You'll tackle advanced prompting architectures, tool orchestration, and AI-augmented decision-making — putting your domain knowledge to work at a level most professionals never reach.</p>
       </div>
       <div class="process-arrow">
         <svg class="arrow-svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -1315,9 +1422,37 @@
       </div>
       <div class="process-step">
         <span class="step-num">03</span>
-        <div class="step-phase">Operate</div>
-        <div class="step-title">Deploy in Your Role</div>
-        <p class="step-desc">Guided implementation sprints where you build real workflows for your actual job. Accountability checkpoints, peer review, and ongoing access to the 12AI operator network post-graduation.</p>
+        <div class="step-phase">Domination</div>
+        <div class="step-title">12AI Domination</div>
+        <p class="step-desc">This is where separation happens. You'll operate at a level that makes you indispensable — leading AI adoption within your team, building systems that compound over time, and executing at a pace your peers simply can't match. Graduates of this tier don't just use AI. They define what AI-powered work looks like in their field.</p>
+      </div>
+    </div>
+
+    <div class="validation-block" data-aos="fade-up" data-aos-delay="150">
+      <div class="validation-inner">
+        <div class="validation-left">
+          <div class="validation-badge">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2L17.5 9.5L26 10.5L20 16.5L21.5 26L14 22L6.5 26L8 16.5L2 10.5L10.5 9.5L14 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="validation-eyebrow">Final Credential</div>
+            <div class="validation-title">12AI Operator Validation</div>
+          </div>
+        </div>
+        <div class="validation-right">
+          <p class="validation-desc">Completion isn't the finish line — <strong>validation is</strong>. Every 12AI graduate undergoes a rigorous, domain-specific assessment tailored to their professional field. HR professionals are tested on real talent and policy scenarios. Legal professionals on contract analysis and research accuracy. Finance and accounting on model integrity and AI-assisted reporting. Operations, engineering, and executive tracks each carry their own validation criteria.</p>
+          <p class="validation-desc" style="margin-top: 0.8rem;">Pass the assessment and you earn the <strong>12AI Operator credential</strong> — a verified, field-specific designation that signals to employers, clients, and colleagues that your AI fluency isn't self-reported. It's proven.</p>
+          <div class="validation-domains">
+            <span class="vd-tag">Executives</span>
+            <span class="vd-tag">Finance &amp; Accounting</span>
+            <span class="vd-tag">Human Resources</span>
+            <span class="vd-tag">Engineering</span>
+            <span class="vd-tag">Operations</span>
+            <span class="vd-tag">Legal</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
